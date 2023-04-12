@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--bg-background);
+}
+:root{
+    --text-color:#fff;
+    --bg-background: #2a2a2af7;
+    --secondbg-background:#202020;
+    --main-color: red;
+    --h2-font:5rem;
+    --p-font:1rem;
+
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 20px 10%;
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
+    transition: all .45s ease;
+
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.navlist{
+   color: var(--text-color);
+   font-weight: 500;
+   font-size: 1.1rem;
+   display: flex;
+   cursor: pointer;
+}
+.navlist li{
+  margin: 15px;
+}
+span{
+    font-size: 5rem;
+    color: var(--main-color);
+}
+.navlist a.active{
+    color: var(--main-color);
+}
+.navlist li:hover{
+    color: var(--main-color);
+}
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+section{
+    padding: 160px 15% 120px;
+}
+.home{
+ width: 100%;
+ height: 100vh;
+ background-image: url(clint2.jpg);
+ background-size: cover;
+ background-position: center;
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+}
+.img{
+    width: fit-content;
+    height: 100vh;
+}
+.home-text h3 {
+    color: var(--text-color);
+    margin: 0 0 35px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.home-text h1 {
+    font-size: var(--h2-font);
+    font-weight: 700;
+    color: var(--text-color);
+    list-style: 1.1;
+    margin: 0 0 8px;
+}
+.home-text p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+.btn2 {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-left: 35px;
+    
+}
+
+.btn2 span i {
+    height: 55px;
+    width: 55px;
+    background: var(--main-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border-radius: 25%;
+    margin-right: 5px;
+    transition: all .45s ease;
+}
+@media (max-width:1700px) {
+    header {
+        padding: 12px 2.5%;
+        transition: 1s;
+    }
+
+    header.sticky {
+        padding: 10px 2.5%;
+        transition: 1s;
+    }
+
+    section {
+        padding: 110px 3% 60px;
+    }
+
+    .end {
+        padding: 10px 3%;
+    }
+}
+
+@media (max-width:1100px) {
+    :root {
+        --big-font: 4rem;
+        --h2-font: 2.5rem;
+        --p-font: 1rem;
+        transition: .1s;
+    }
+
+    .home-text h3 {
+        font-size: 2.5rem;
+    }
+
+    .home {
+        height: 87vh;
+    }
+}
+@media  (max-width:840px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        /* text-align: center;*/
+        transition: all .45s ease;
+    }
+
+    .navlist a {
+        display: block;
+        margin: 17px;
+        font-style: 20px;
+        transition: all .45s ease;
+        color: var(--text-color);
+    }
+
+    .navlist a:hover {
+        color: var(--main-color);
+    }
+
+    .navlist a.active {
+        color: var(--text-color);
+    }
+
+    .navlist.open {
+        top: 100%;
+    }
+}
